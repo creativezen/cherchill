@@ -1,0 +1,106 @@
+.shops {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    width: 1200px;
+    height: 900px;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzkxIiBoZWlnaHQ9IjEwNzIiIHZpZXdCb3g9IjAgMCA3OTEgMTA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZl80MDM1Xzk1NCkiPgo8ZWxsaXBzZSBjeD0iLTM0NS43NDgiIGN5PSI0MDUuODA0IiByeD0iNjAwLjUiIHJ5PSIzMzUuNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTExLjIwNjEgLTM0NS43NDggNDA1LjgwNCkiIGZpbGw9IiM3QTExMjAiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9mXzQwMzVfOTU0IiB4PSItMTQ4Mi40NSIgeT0iLTQ4Ny40NzMiIHdpZHRoPSIyMjczLjQiIGhlaWdodD0iMTc4Ni41NSIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiPgo8ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyNzIiIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl80MDM1Xzk1NCIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &:after {
+    content: '';
+    width: 1200px;
+    height: 670px;
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYzMiIgaGVpZ2h0PSI5MDAiIHZpZXdCb3g9IjAgMCAxNjMyIDkwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZl80MDM1Xzk1MykiPgo8ZWxsaXBzZSBjeD0iMTEzNy4yNSIgY3k9Ijg5My40MTUiIHJ4PSI2MDAuNSIgcnk9IjMzNS41IiB0cmFuc2Zvcm09InJvdGF0ZSgtMTEuMjA2MSAxMTM3LjI1IDg5My40MTUpIiBmaWxsPSIjN0ExMTIwIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfZl80MDM1Xzk1MyIgeD0iMC41NTEwNDEiIHk9IjAuMTM4MTg0IiB3aWR0aD0iMjI3My40IiBoZWlnaHQ9IjE3ODYuNTUiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMjcyIiByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfNDAzNV85NTMiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: $w_mob_s) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 0;
+      margin: 0 -10px -20px;
+    }
+  }
+
+  &__cell {
+    @media (max-width: $w_mob_s) {
+      width: 50%;
+      padding: 0 10px 20px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: $w_mob_sm) {
+      width: 100%;
+    }
+
+    &_w1 {
+      grid-column-end: span 1;
+      grid-row-end: span 2;
+
+    }
+
+    &_w2 {
+      grid-column-end: span 2;
+    }
+
+    &_w3 {
+      grid-column-end: span 1;
+    }
+  }
+
+  &__item {
+    height: 314px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    @media (max-width: $w_mob_s) {
+      height: 350px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shops__cell_w1 & {
+      height: 650px;
+
+      @media (max-width: $w_mob_s) {
+        height: 350px;
+      }
+    }
+  }
+}

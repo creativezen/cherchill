@@ -1,0 +1,38 @@
+// FONTS
+$font: 'Cormorant Garamond', serif;
+$font2: 'Times New Roman', serif;
+
+// PATH TO IMAGES
+$imgpath : "../img";
+
+// responsive breackpoints
+$w_mob_sm:  560px;
+$w_mob_s:  768px;
+$w_mob:    991px;
+$w_tab:    1200px;
+
+
+html {
+    --doc-padding: 40px;
+    --doc-font-size: clamp(16px, 1.625vw, 26px);
+
+
+    // colors of project
+
+    --c-white       : #ffffff;
+    --c-black       : #000000;
+    --gold-brand: #FFCE7B;
+    --red-brand: #7A1120;
+
+    --gold-text: #D0AA93;
+
+    --red: #6F2126;
+    --red-bg: #5A1F24;
+    --red-numb: #460C10;
+
+    --white-bg: #F6F6F6;
+    --black-bg: #292728;
+
+    --gray-input: #767676;
+
+}

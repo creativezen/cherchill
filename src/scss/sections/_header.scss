@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  padding: 50px 0 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  @media (max-width: $w_mob) {
+    padding: 20px 0;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 110px;
+
+    @media (max-width: $w_mob) {
+      width: 80px;
+    }
+  }
+}

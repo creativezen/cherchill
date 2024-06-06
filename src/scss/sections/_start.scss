@@ -1,0 +1,105 @@
+.start {
+  background-color: var(--red);
+  background-image: url("../img/content/bg-pattern.png");
+  background-image: image-set(
+          url("../img/content/bg-pattern.png") 1x type("image/png"),
+          url("../img/content/bg-patternp@2x.png") 2x type("image/png"),
+          url("../img/content/bg-pattern.webp") 1x type("image/webp"),
+          url("../img/content/bg-pattern@2x.webp") 2x type("image/webp"),
+  );
+
+  &__inner {
+
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -10px -20px;
+    flex-wrap: wrap;
+  }
+
+  &__cell {
+    width: 50%;
+    padding: 0 10px 20px;
+    box-sizing: border-box;
+
+    @media (max-width: $w_mob_s) {
+      width: 100%;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px 25px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: $w_mob) {
+      padding: 15px;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 80%;
+      display: block;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      object-fit: cover;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    line-height: 106%;
+    letter-spacing: -0.02em;
+    color: var(--gold-brand);
+    font-family: $font2;
+    font-size:  clamp(24px, 1.875vw, 30px);
+  }
+
+  &__text {
+    margin-top: 10px;
+
+    line-height: 106%;
+    font-size:  clamp(18px, 1.375vw, 22px);
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= utilities/head.html
+<body>
+	<div class="wrapper">
+		//= sections/header.html
+
+		//= sections/banner.html
+		//= sections/shops.html
+		//= sections/sale.html
+		//= sections/partners.html
+		//= sections/statistics.html
+		//= sections/form_shop.html
+		//= sections/job.html
+		//= sections/start.html
+		//= sections/assortment.html
+		//= sections/program.html
+		//= sections/about.html
+		//= sections/risks.html
+		//= sections/form.html
+		//= sections/info.html
+		//= sections/rates.html
+		//= sections/services.html
+		//= sections/step.html
+
+	</div>
+
+	<script>
+      function init() {
+
+          const marqueeArray = document.querySelectorAll('.js-marquee')
+
+          let i = 0;
+          let speed = 0.3;
+
+          marqueeArray?.forEach(marquee => {
+
+              const clone = marquee.innerHTML;
+              const firstElement = marquee.children[0];
+
+              marquee.insertAdjacentHTML('beforeend', clone);
+              marquee.insertAdjacentHTML('beforeend', clone);
+
+              setInterval(function () {
+                  firstElement.style.marginLeft = `-${i}px`;
+                  if (i > firstElement.clientWidth) {
+                      i = 0;
+                  }
+                  i = i + speed;
+              }, 0);
+          })
+      }
+      init();
+	</script>
+</body>
+</html>
