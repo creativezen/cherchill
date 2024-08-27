@@ -30,24 +30,31 @@
   }
 
   &__item {
-    height: 100%;
-    padding: 25px 35px;
+    min-height: 210px;
+    padding: 45px 35px;
 
     box-sizing: border-box;
     background: rgba(255,255,255,0.3);
     border-radius: 12px;
-  }
 
-  &__title {
-    line-height: 110%;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: clamp(30px, 2.75vw, 44px);
+    @media (max-width: $w_mob) {
+      min-height: 150px;
+    }
   }
 
   &__text {
-    margin-top: 20px;
-
+    letter-spacing: -0.02em;
     line-height: 103%;
+    font-size: clamp(26px, 2.375vw, 38px);
+  }
+
+  &__numb {
+    margin-top: 10px;
+
+    color: var(--gold-brand);
+    font-size: clamp(30px, 3.1875vw, 51px);
+
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum';
   }
 }

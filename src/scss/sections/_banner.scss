@@ -1,5 +1,5 @@
 .banner {
-	padding-top: 325px;
+	padding-top: 240px;
 	position: relative;
 	z-index: 1;
 
@@ -31,24 +31,32 @@
 	&__inner {
 		position: relative;
 		z-index: 2;
+
+		h1 {
+			max-width: 75%;
+
+			@media (max-width: $w_mob) {
+				max-width: 100%;
+			}
+		}
 	}
 
 	&__text {
-		max-width: 75%;
-
-		@media (max-width: $w_mob_s) {
-			max-width: 90%;
-		}
-
 		p {
-			display: inline;
 			line-height: 124%;
-			letter-spacing: 0.01em;
+			letter-spacing: -0.02em;
+
 			font-variant-numeric: lining-nums;
+
+			& + p {
+				margin-top: -5px;
+				position: relative;
+				z-index: 1;
+			}
 
 
 			span {
-				padding: 3px 13px;
+				padding: 9px 13px;
 				background: var(--c-black);
 
 				font-size: clamp(25px, 3.875vw, 62px);
@@ -68,10 +76,15 @@
 					color: var(--gold-brand);
 				}
 
+				&.big {
+					padding: 0;
+
+					font-size: clamp(25px, 4.5625vw, 73px);
+				}
+
 				& + span {
 					padding-bottom: 13px;
-					position: relative;
-					z-index: 1;
+
 
 					@media (max-width: $w_mob_s) {
 						padding: 3px 1px;
@@ -82,7 +95,7 @@
 	}
 
 	.btn {
-		margin-top: 80px;
+		margin-top: 70px;
 
 		@media (max-width: $w_mob) {
 			margin-top: 50px;

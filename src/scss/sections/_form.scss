@@ -1,13 +1,4 @@
 .form {
-	background-color: var(--red);
-
-	background-image: url("../img/content/bg-pattern.png");
-	background-image: image-set(
-					url("../img/content/bg-pattern.png") 1x type("image/png"),
-					url("../img/content/bg-patternp@2x.png") 2x type("image/png"),
-					url("../img/content/bg-pattern.webp") 1x type("image/webp"),
-					url("../img/content/bg-pattern@2x.webp") 2x type("image/webp"),
-	);
 
 	&__inner {
 		max-width: 1380px;
@@ -20,7 +11,7 @@
 		overflow: hidden;
 
 		backdrop-filter: blur(8px);
-		background: rgba(66,8,16,0.3);
+		background: var(--red-bg2);
 
 		@media (max-width: $w_mob) {
 			padding: 30px 20px;
